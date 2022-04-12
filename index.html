@@ -7,9 +7,9 @@
         <link type="text/css" rel="stylesheet" href="css/normalize.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <!-- Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <!-- Font Awesome for Icon -->
         <script src="https://kit.fontawesome.com/540b9977d6.js" crossorigin="anonymous"></script>
     </head>
@@ -26,7 +26,42 @@
             </nav>
         </header>
         <main>
-
+            <section id="search">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ou en pleine nature</p>
+                <form method="get" ></form> <!-- action = ??? don't want to recharge the page and can't preventdefault() without JS-->
+                    <button id="search-locate"><i class="fa-solid fa-location-dot"></i></button>
+                    <input type="text" placeholder="Ou allez vous ?">
+                    <button class="search-btn search-btn-text">Rechercher</button>
+                    <button class="search-btn search-btn-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <div id="search-filter-bloc">
+                    <p>Filtres</p>
+                    <div id="filter-elements">
+                        <div class="filter-element">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <p>Économique</p>
+                        </div>
+                        <div class="filter-element">
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <p>Familial</p>
+                        </div>
+                        <div class="filter-element">
+                            <i class="fa-solid fa-heart"></i>
+                            <p>Romantique</p>
+                        </div>
+                        <div class="filter-element">
+                            <i class="fa-solid fa-dog"></i>
+                            <p>Animaux Autorisés</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="search-information">
+                    <i class="fa-solid fa-info"></i>
+                    <p> Plus de <span>500</span> logements sont disponibles dans cette ville</p>
+                </div>
+                
+            </section>
         </main>
         <footer>
 

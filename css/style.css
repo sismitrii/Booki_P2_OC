@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    min-width: 300px;
 }
 
 a {
@@ -15,8 +16,19 @@ a {
 
 }
 
+main > section {
+    width: 95%;
+    margin: auto;
+}
 
-/*------------------- HEADER -----------------*/ 
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+/*------------------------------------- HEADER ----------------------------------*/ 
 
 header {
     display: flex;
@@ -50,12 +62,162 @@ nav ul li a {
     display: block;
     width: 100%;
     padding: 30px 20px;
+    font-weight: 300;
 }
 
 nav ul li a:hover {
     color: #0065FC;
     border-top: 2px solid #0065FC;
 }
+
+/*--------------------------------------- MAIN ----------------------------------*/ 
+
+/*------------------------- Search section -------------------------*/ 
+
+#search > p {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+form {
+    position: relative;
+}
+
+#search-locate {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius:  15px 0px 0px 15px ;
+    border: none;
+    font-size: 18px;
+}
+
+#search input {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #f2f2f2;
+    border-radius: 15px 0px 0px 15px;
+    outline: none;
+    padding-left: 70px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.search-btn {
+    position: relative;
+    left: -20px;
+    height: 50px;
+    padding: 10px 15px;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.search-btn-icon {
+    display: none;
+}
+
+
+#search-filter-bloc > p {
+    padding: 10px 30px 10px 0px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#search-filter-bloc {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    margin-top: 30px;
+}
+
+#filter-elements {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex: 2;      /* ******** here ******** */
+}
+
+.filter-element {
+    position: relative;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+    margin-right: 1.8%;       /* ******** here ******** */
+}
+
+
+.filter-element i {
+    position: relative; /* pour qu'il depasse sur la bordure le mettre en relative de -2px marche aussi..*/
+    left: -2px;
+    width :50px;
+    height: 50px;
+    line-height: 50px;  /* tips to align 1 only line of text*/
+    text-align: center;
+    border-radius: 50%;
+    color: #0065FC;
+    background-color: #deebff;
+}
+
+.filter-element p {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px 25px 0px 10px; 
+}
+
+/* don't know how to have a time for the transition */
+
+.filter-element:hover > i {   /* when the website will be animated with js better to add a class to .filter-element to keep that form even selected */
+    order: 2;
+    left : 2px;
+    background-color: white;
+    color: black;
+    border: 2px solid #deebff;
+}
+
+.filter-element:hover > p {
+    order: 1;
+    padding: 0px 10px 0px 25px;
+    color: #0065FC;
+}
+
+.filter-element:hover {
+    background-color: #deebff;
+    border: 2px solid #deebff;
+}
+
+#search-information {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+/* ******** here pb with responsive of i and circle *********/
+#search-information i {  /*used another i tag because the i used seems to need pro font awesome*/
+    width: 25px;
+    height: 25px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    color: #0065FC;
+    margin-right:10px ;
+}
+
+#search-information p {
+    font-weight: 300;
+}
+
+
+
+
 
 /*<-><-><-><-><-><-><->< TABLET breakpoint 992px <-><-><-><-><-><-><-><->*/
 
@@ -64,6 +226,15 @@ nav ul li a:hover {
         border-top: none; 
         border-left: 2px solid #0065FC;      /* WATCH if you can find something better*/
     }
+
+    #search-filter-bloc {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-element {
+        margin-bottom: 15px;
+    }
 }
 
 
@@ -71,12 +242,14 @@ nav ul li a:hover {
 
 
 @media screen and (max-width:768px) {
+
+    /*------------- HEADER ---------------*/ 
     header {
         flex-direction: column;
         align-items: center;
         height: 150px;
     }
-    
+
     nav {
         justify-content: center;
     }
@@ -95,4 +268,28 @@ nav ul li a:hover {
     border-left:0 ;
     border-bottom: 3px solid #0065FC;
     }
+
+    /*--------------- MAIN ----------------*/ 
+
+    /*-------- Search section ----------*/ 
+    #search input {
+        width: 80%;
+    }
+    #search {
+        margin:40px 20px;
+    }
+
+    #search > p {
+        margin-bottom: 30px;
+    }
+
+    .search-btn-icon {
+        display: inline-block;
+    }
+
+    .search-btn-text {
+        display: none;
+    }
+
 }
+
