@@ -155,7 +155,7 @@ form {
 
 
 .filter-element i {
-    position: relative; /* pour qu'il depasse sur la bordure le mettre en relative de -2px marche aussi..*/
+    position: relative;
     left: -2px;
     width :50px;
     height: 50px;
@@ -216,10 +216,167 @@ form {
 }
 
 
+/*------------------------- Accomadation section -------------------------*/ 
+
+#accomodation {
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+
+#accomodation section {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#accomodation-result {
+    width : 66%;
+    margin-right: 1.8%;
+    padding: 40px 16px;
+}
+
+#accomodation-result h2 {
+    font-weight: 600;
+    margin: 0px 0px 20px 20px;
+}
+
+#accomodation-result a {
+    display: inline-block;
+    margin: 25px 0px 0px 25px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+#accomodation-cards {
+    /*height: 420px;*/
+    display: flex;
+    justify-content: space-around;
+    /*align-content: space-between;*/
+    flex-wrap: wrap;
+}
+
+.accomodation-card {
+    width : 247px;
+    height: auto;
+    margin: 15px 5px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.accomodation-card img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0;
+
+}
+
+.accomodation-card-text > * {
+    margin: 5px 10px;
+}
+
+#accomodation h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* -----Common for all the card of accomodation ------- */
+
+#accomodation p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#accomodation span {
+    font-weight: 600;
+}
+
+.star {
+    font-size: 12px;
+}
+
+.star .blue {
+    color: #0065FC;
+}
+
+.star .grey {
+    color: #d9d9d9;
+}
+
+/* ------------ */
+
+#accomodation-popular {
+    width : 31%;
+    min-width: 380px;
+    padding: 30px 20px 0px;
+}
+
+#accomodation-popular div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#accomodation-popular h2{
+    font-weight: 600;
+    margin: 10px 30px 30px 0px;
+}
+
+#accomodation-popular div:first-child i {
+    font-size: 22px;
+}
+
+#accomodation-popular-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.accomodation-popular-card {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 25px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.accomodation-popular-card img {
+    height: 100%;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.accomodation-popular-card-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 20px;
+    width: 200px;
+}
+
+.accomodation-popular-card-text h3 {
+    margin: 10px 0px;
+}
+
+.accomodation-popular-card-text .star {
+    position: absolute;
+    bottom: 5px;
+}
 
 
 
-/*<-><-><-><-><-><-><->< TABLET breakpoint 992px <-><-><-><-><-><-><-><->*/
+
+
+
+
+
+
+/*<-><-><-><-><-><-><-><-><-><-><->< TABLET breakpoint 992px <-><-><-><-><-><-><-><-><-><-><-><->*/
 
 @media screen and (max-width:992px) {
     nav ul li a:hover {
@@ -235,10 +392,41 @@ form {
     .filter-element {
         margin-bottom: 15px;
     }
+
+    #accomodation {
+        flex-direction: column;
+    }
+
+    #accomodation-popular {
+        order: 1;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #accomodation-popular-cards {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        
+    }
+
+    #accomodation-result {
+        order : 2;
+        width :100%
+    }
+
+    .accomodation-popular-card {
+        width: 45%;
+    }
+
+    .accomodation-card {
+        width: 45%;
+    }
+
+
 }
 
 
-/*<-><-><-><-><-><-><->< MOBILE PHONE breakpoint 768px <-><-><-><-><-><-><-><->*/
+/*<-><-><-><-><-><-><-><-><-><-><->< MOBILE PHONE breakpoint 768px <-><-><-><-><-><-><-><-><-><-><-><->*/
 
 
 @media screen and (max-width:768px) {
@@ -291,5 +479,41 @@ form {
         display: none;
     }
 
+
+    #accomodation {
+        width: 100%;
+    }
+
+    #accomodation section {
+        border-radius: 0px;
+    }
+    #accomodation-popular {
+        margin-bottom: 0px;
+        min-width: 0px;
+    }
+
+    #accomodation-popular-cards {
+        flex-flow : column nowrap;
+    }
+
+    .accomodation-popular-card {
+        width: 100%;
+    }
+
+
+    #accomodation #accomodation-result {
+        background-color: white;
+    }
+
+    #accomodation-cards {
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .accomodation-card {
+        width : 100%;
+        max-width: 400px;
+    }
 }
 
