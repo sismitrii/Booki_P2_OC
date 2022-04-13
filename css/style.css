@@ -27,6 +27,10 @@ h1 {
     margin-bottom: 5px;
 }
 
+h2 {
+    font-weight: 600;
+}
+
 
 /*------------------------------------- HEADER ----------------------------------*/ 
 
@@ -236,7 +240,6 @@ form {
 }
 
 #accomodation-result h2 {
-    font-weight: 600;
     margin: 0px 0px 20px 20px;
 }
 
@@ -263,6 +266,7 @@ form {
     background-color: white;
     padding: 5px;
     border-radius: 20px;
+    box-shadow: 2px 2px 8px #d9d9d9;
 }
 
 .accomodation-card img {
@@ -320,7 +324,6 @@ form {
 }
 
 #accomodation-popular h2{
-    font-weight: 600;
     margin: 10px 30px 30px 0px;
 }
 
@@ -341,6 +344,7 @@ form {
     background-color: white;
     padding: 5px;
     border-radius: 20px;
+    box-shadow: 2px 2px 8px #d9d9d9;
 }
 
 .accomodation-popular-card img {
@@ -369,6 +373,78 @@ form {
 }
 
 
+/*------------------------- Activites section -------------------------*/ 
+#activities {
+    width: 95%;
+    margin: 60px auto;
+}
+
+#activities h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 30px 0px 20px;
+}
+
+#activities article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px #e8e8e8;
+}
+
+#activities article h3 {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#activities article img {
+    height: 100px;     /* If i don't set them initial size they sometimes overflow..*/
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+    flex: 4;
+}
+
+#activities-bloc {
+    display: flex;
+    justify-content: space-between;
+}
+
+#activities-bloc .long {
+    width : 22%;
+    height: 450px;
+}
+
+#activities-bloc > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22%;
+    height: 450px;
+}
+
+#activities-bloc .short {
+    width: 100%;
+}
+
+#activities-bloc > div:nth-child(2) .short:nth-child(1){   /* Why 2 ???*/
+    height: 53%;
+}
+
+#activities-bloc > div:nth-child(2) .short:nth-child(2){
+    height: 37%;
+}
+
+#activities-bloc > div:nth-child(4) .short:nth-child(1){    /* Why 4 ???*/
+    height: 44%;
+}
+
+#activities-bloc > div:nth-child(4) .short:nth-child(2){
+    height: 46%;;
+}
+
+
 
 
 
@@ -392,6 +468,10 @@ form {
     .filter-element {
         margin-bottom: 15px;
     }
+
+
+
+    /*------- Accomadation section ---------*/
 
     #accomodation {
         flex-direction: column;
@@ -422,6 +502,36 @@ form {
         width: 45%;
     }
 
+      /*------- Activities section ---------*/
+
+    #activities-bloc {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1050px;
+    }
+
+    #activities-bloc > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 250px;
+    }
+
+    #activities .long {
+        width: 100%;
+        height: 250px;
+    }
+
+
+
+    #activities-bloc > div:nth-child(2) .short:nth-child(1),
+    #activities-bloc > div:nth-child(2) .short:nth-child(2),
+    #activities-bloc > div:nth-child(4) .short:nth-child(1),
+    #activities-bloc > div:nth-child(4) .short:nth-child(2){   /* Why 2 ???*/
+        height: 100%;
+        width: 48%;
+    }
 
 }
 
@@ -457,6 +567,7 @@ form {
     border-bottom: 3px solid #0065FC;
     }
 
+
     /*--------------- MAIN ----------------*/ 
 
     /*-------- Search section ----------*/ 
@@ -479,6 +590,7 @@ form {
         display: none;
     }
 
+    /*------ Accomadation section ------*/
 
     #accomodation {
         width: 100%;
@@ -514,6 +626,32 @@ form {
     .accomodation-card {
         width : 100%;
         max-width: 400px;
+    }
+
+
+    /*------ Activities section ------*/
+
+    #activities {
+        width: 100%;
+        padding: 0px 16px;
+    }
+
+    #activities-bloc article {
+        margin-bottom: 30px;
+    }
+
+    #activities-bloc > div {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+    #activities-bloc > div:nth-child(2) .short:nth-child(1),
+    #activities-bloc > div:nth-child(2) .short:nth-child(2),
+    #activities-bloc > div:nth-child(4) .short:nth-child(1),
+    #activities-bloc > div:nth-child(4) .short:nth-child(2){   /* Why 2 ???*/
+        height: 250px;
+        width: 100%;
     }
 }
 
