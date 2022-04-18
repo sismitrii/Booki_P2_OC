@@ -20,7 +20,7 @@ a {
 }
 
 main > section {
-    width: 95%;
+    width: 93%;
     margin: auto;
 }
 
@@ -31,6 +31,7 @@ h1 {
 }
 
 h2 {
+    font-size: 22px;
     font-weight: 600;
 }
 
@@ -41,15 +42,17 @@ h2 {
 /*============================================================================*/
 
 header {
+    width: 93%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 #header-logo {
-    width: 65px;
+    width: 60px;
     height: auto;
-    margin: 20px 70px 20px;
+    margin: 20px 15px 20px;
 }
 nav {
     width: 100%;
@@ -94,7 +97,7 @@ nav ul li a:hover {
 
 #search > p {
     margin-top: 0;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -126,7 +129,7 @@ form {
 
 .search-btn {
     position: relative;
-    left: -20px;
+    left: -15px;
     height: 50px;
     padding: 10px 15px;
     background-color: #0065FC;
@@ -140,12 +143,13 @@ form {
 
 .search-btn-icon {
     display: none;
+    border-radius: 15px ;
 }
 
 #search-filter-bloc > p {
     padding: 10px 30px 10px 0px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #search-filter-bloc {
@@ -172,11 +176,16 @@ form {
     margin-right: 1.8%;       /* ******** here ******** */
 }
 
+.filter-element:nth-child(4){
+    margin-right: 0px;           /*  To avoid wrap at width of 1005px */
+}
+
 .filter-element i {
     position: relative;
     left: -2px;
     width :50px;
     height: 50px;
+    font-size: 20px;
     line-height: 50px;  /* tips to align 1 only line of text*/
     text-align: center;
     border-radius: 50%;
@@ -215,15 +224,15 @@ form {
 #search-information {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 /* ******** here pb with responsive of i and circle *********/
-#search-information i {  /*used another i tag because the i used seems to need pro font awesome*/
+#search-information i { 
     width: 25px;
     height: 25px;
     line-height: 22px;
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
     border: 1px solid #d9d9d9;
     border-radius: 50%;
     color: #0065FC;
@@ -239,7 +248,7 @@ form {
 /*-------------------- Accomodation section --------------------*/
 
 #accomodation {
-    width: 95%;
+    
     margin: auto;
     display: flex;
 }
@@ -250,8 +259,8 @@ form {
 }
 
 #accomodation-result {
-    width : 66%;
-    margin-right: 1.8%;
+    width : 65.5%;
+    margin-right: 3%;
     padding: 40px 16px;
 }
 
@@ -259,11 +268,15 @@ form {
     margin: 0px 0px 20px 20px;
 }
 
-#accomodation-result a {
+#accomodation-result > a {
     display: inline-block;
     margin: 25px 0px 0px 25px;
     font-size: 16px;
     font-weight: 600;
+}
+
+#accomodation-result > a:hover {
+    text-decoration: underline;
 }
 
 
@@ -328,9 +341,9 @@ form {
 /* ------------ */
 
 #accomodation-popular {
-    width : 32%;
-    min-width: 380px;
-    padding: 30px 20px 0px;
+    width : 31.5%;
+    min-width: 340px;
+    padding: 30px 40px 0px;
 }
 
 #accomodation-popular div:first-child {
@@ -350,17 +363,22 @@ form {
 #accomodation-popular-cards {
     display: flex;
     flex-direction: column;
+    height: 85%;
 }
 
 .accomodation-popular-card {
     display: flex;
     width: 100%;
-    height: 150px;
+    height: 29%;
     margin-bottom: 25px;
     background-color: white;
     padding: 5px;
     border-radius: 20px;
     box-shadow: 2px 2px 8px #d9d9d9;
+}
+
+.accomodation-popular-card:hover, .accomodation-card:hover {
+    box-shadow: 4px 4px 20px #c9c9c9;
 }
 
 .accomodation-popular-card img {
@@ -393,13 +411,10 @@ form {
 /*-------------------- Activities section --------------------*/ 
 
 #activities {
-    width: 95%;
     margin: 60px auto;
 }
 
 #activities h2 {
-    font-size: 22px;
-    font-weight: 600;
     margin: 30px 0px 20px;
 }
 
@@ -410,6 +425,11 @@ form {
     border-radius: 20px;
     box-shadow: 2px 2px 8px #e8e8e8;
 }
+
+#activities article:hover {
+    box-shadow: 4px 4px 20px #d8d8d8;
+}
+
 
 #activities article h3 {
     padding: 20px;
@@ -482,7 +502,7 @@ footer div {
 footer div h3 {
     font-size: 18px;
     font-weight: 600;
-    margin: 30px 0 20px;
+    margin: 25px 0 15px;
 }
 
 footer div ul {
@@ -536,11 +556,17 @@ footer a:hover {
         order: 1;
         width: 100%;
         margin-bottom: 20px;
+        padding: 30px 16px 0px;
+    }
+
+    #accomodation-popular div:first-child {
+        margin: 0 20px;
     }
 
     #accomodation-popular-cards {
         flex-flow: row wrap;
         justify-content: space-around;
+        height: auto;
         
     }
 
@@ -551,6 +577,8 @@ footer a:hover {
 
     .accomodation-popular-card {
         width: 45%;
+        height: 160px;
+
     }
 
     .accomodation-card {
@@ -603,6 +631,7 @@ footer a:hover {
     /*------------------------ HEADER ------------------------*/ 
     /*========================================================*/ 
     header {
+        width: 100%;
         flex-direction: column;
         align-items: center;
         height: 150px;
@@ -618,13 +647,14 @@ footer a:hover {
     }
 
     nav ul li a {
+        border-top: 0;
         padding: 20px 0;
         border-bottom: 3px solid #f2f2f2;
     }
 
     nav ul li a:hover { 
-    border-top:0 ;
-    border-bottom: 3px solid #0065FC;
+        border-top: 0 ;
+        border-bottom: 3px solid #0065FC;
     }
 
 
@@ -668,17 +698,31 @@ footer a:hover {
         min-width: 0px;
     }
 
+    #accomodation-popular div:first-child {
+        margin: 0;
+    }
+
     #accomodation-popular-cards {
         flex-flow : column nowrap;
     }
 
     .accomodation-popular-card {
         width: 100%;
+        margin-bottom: 10px;
     }
 
 
     #accomodation #accomodation-result {
         background-color: white;
+    }
+
+    #accomodation-result h2 {
+        margin: 0px 0px 20px 0px;
+    }
+
+    #accomodation-result > a {
+        margin: 25px 0px 0px 0px ;
+        font-size: 18px;
     }
 
     #accomodation-cards {
@@ -689,7 +733,8 @@ footer a:hover {
 
     .accomodation-card {
         width : 100%;
-        max-width: 400px;
+        margin: 7px;
+        /*max-width: 400px;    watch with Thomas if it's better to remove it..*/  
     }
 
 
@@ -718,8 +763,9 @@ footer a:hover {
     #activities-bloc > div:nth-child(2) .short:nth-child(1),
     #activities-bloc > div:nth-child(2) .short:nth-child(2),
     #activities-bloc > div:nth-child(4) .short:nth-child(1),
-    #activities-bloc > div:nth-child(4) .short:nth-child(2){   
-        height: 250px;
+    #activities-bloc > div:nth-child(4) .short:nth-child(2),
+    #activities .long {   
+        height: 200px;
         width: 100%;
     }
 
@@ -729,7 +775,7 @@ footer a:hover {
 
     footer {
         flex-direction: column;
-        padding: 20px 16px 40px;
+        padding: 20px 30px 40px;
     }
 
     footer div {
