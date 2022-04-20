@@ -293,9 +293,16 @@ form {
     height: auto;
     margin: 15px 5px;
     background-color: white;
-    padding: 5px;
     border-radius: 20px;
     box-shadow: 2px 2px 8px #d9d9d9; 
+}
+
+.accomodation-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 5px;
 }
 
 .accomodation-card img {
@@ -367,7 +374,6 @@ form {
 }
 
 .accomodation-popular-card {
-    display: flex;
     width: 100%;
     height: 29%;
     margin-bottom: 25px;
@@ -375,6 +381,14 @@ form {
     padding: 5px;
     border-radius: 20px;
     box-shadow: 2px 2px 8px #d9d9d9;
+}
+
+.accomodation-popular-card > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
 }
 
 .accomodation-popular-card:hover, .accomodation-card:hover {
@@ -426,6 +440,16 @@ form {
     box-shadow: 2px 2px 8px #e8e8e8;
 }
 
+#activities article > a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+
 #activities article:hover {
     box-shadow: 4px 4px 20px #d8d8d8;
 }
@@ -441,7 +465,7 @@ form {
     height: 100px;     /* If i don't set them initial size they sometimes overflow..*/
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
-    flex: 4;
+    flex: 1;
 }
 
 #activities-bloc {
@@ -582,7 +606,7 @@ footer a:hover {
     }
 
     .accomodation-card {
-        width: 45%;
+        width: 47%;
     }
 
 
