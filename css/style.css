@@ -25,7 +25,7 @@ main > section {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -688,7 +688,7 @@ footer a:hover {
 
     /*-------- Search section ----------*/ 
     #search input {
-        width: 80%;
+        width: 82%;
     }
     #search {
         margin:40px 20px;
@@ -719,6 +719,7 @@ footer a:hover {
     }
     #accomodation-popular {
         margin-bottom: 0px;
+        padding-bottom: 20px ;
         min-width: 0px;
     }
 
